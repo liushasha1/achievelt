@@ -1,30 +1,11 @@
-# achieveit
+web前端代码
+使用框架：Vue
 
-> A Vue.js project
+代码主要分为四个板块：
+1.项目管理：liushasha1/achievelt/src/components/project_manage
+2.流程管理：liushasha1/achievelt/src/components/process_manage
+3.工时管理：liushasha1/achievelt/src/components/workTime_manage
+4.其他管理（包括设备管理，风险管理和评审/缺陷跟踪）：liushasha1/achievelt/src/components/others_manage
 
-## Build Setup
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+登陆界面：/liushasha1/achievelt/src/components/Login.vue
