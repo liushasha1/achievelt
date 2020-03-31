@@ -188,7 +188,10 @@
         var _this = this
         axios({
           method: "get",
-          url: "/feature/template"
+          url: "/feature/template",
+          params:{
+            projectId: _this.$route.query.projectId
+          }
         }).then(response => {
           if (response.data.code === 0) {
             console.log(response.data)

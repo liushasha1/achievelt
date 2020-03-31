@@ -257,6 +257,7 @@
             projectId: _this.$route.query.projectId
           }
         }).then(response => {
+          console.log(response.data)
           if (response.data.code === 0) {
             console.log(response.data)
             window.location.href = 'http://47.100.30.181:8100' + response.data.data
@@ -268,6 +269,9 @@
         axios({
           method: "post",
           url: "/feature/build",
+          params:{
+            projectId: _this.$route.query.projectId
+          },
           data: [{
             projectId: _this.$route.query.projectId,
             feature: _this.form.feature,
@@ -321,6 +325,9 @@
         axios({
           method: "put",
           url: "/feature/update",
+          params:{
+            projectId: _this.$route.query.projectId
+          },
           data: [{
             projectId: _this.$route.query.projectId,
             id: row.id,
@@ -357,6 +364,9 @@
         axios({
           method: "delete",
           url: "/feature/delete",
+          params:{
+            projectId: _this.$route.query.projectId
+          },
           data: [row.id]
         }).then(response => {
           console.log(response.data)
