@@ -1,14 +1,13 @@
 <template>
   <div style="margin-bottom: 40px; ">
     <el-breadcrumb style="font-size: 14px; margin-bottom: 20px;" separator-class="el-icon-arrow-right">
-      <el-breadcrumb-item :to="{ path: '/welcome' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item :to="{ path: '' }">流程管理</el-breadcrumb-item>
-      <el-breadcrumb-item :to="{ path: '/approve_manage' }">审批立项</el-breadcrumb-item>
-      <el-breadcrumb-item :to="{ path: '/project_detail' }">项目详情</el-breadcrumb-item>
+
     </el-breadcrumb>
     <el-card>
       <el-header style="color:#303133 ;font-size: 20px;margin-left: -20px">
         项目基本信息
+          <el-button type="primary" round style="width:80px;float: right;margin-left: 10px;margin-top: -5px;"
+              @click="$router.back(-1)"> 返回</el-button>
       </el-header>
       <div style="width: 100%;height: 1px;background-color: #606266;margin-top: -20px"></div>
       <div class="boxbutton">
@@ -28,43 +27,7 @@
               </el-form-item>
             </el-form-item>
           </el-row>
-          <!-- <el-row>
-          <el-form-item label="客户ID" style="width: 500px">
-            <el-form-item  >{{form.customID}}
-            </el-form-item>
-          </el-form-item>
-          <el-form-item label="接口人" style="width: 500px">
-            <el-form-item  >{{form.customName}}
-            </el-form-item>
-          </el-form-item>
-        </el-row>
-        <el-row>
-          <el-form-item label="客户等级" style="width: 500px">
-            <el-form-item  >{{form.customDegree}}
-            </el-form-item>
-          </el-form-item>
-          <el-form-item label="公司名称" style="width: 500px">
-            <el-form-item  >{{form.firmName}}
-            </el-form-item>
-          </el-form-item>
-        </el-row>
-        <el-row>
-          <el-form-item label="电子邮件" style="width: 500px">
-            <el-form-item  >{{form.email}}
-            </el-form-item>
-          </el-form-item>
-          <el-form-item label="电话" style="width: 500px">
-            <el-form-item  >{{form.telephone}}
-            </el-form-item>
-          </el-form-item>
-        </el-row>
-        <el-row>
-          <el-form-item label="地址" style="width: 500px">
-            <el-form-item  >{{form.address}}
-            </el-form-item>
-          </el-form-item>
-          <br><br>
-        </el-row> -->
+
           <el-row>
             <el-form-item label="预定时间">
               <el-form-item>{{form.beginTime}}
@@ -131,11 +94,7 @@
               </el-form-item>
             </el-form-item>
           </el-row>
-          <el-row>
-            <el-form-item>
-              <el-button type="primary" plain style="margin-left: 20px;width:100px;margin-top: 10px;" @click="$router.back(-1)">返回</el-button>
-            </el-form-item>
-          </el-row>
+
         </el-form>
       </div>
     </el-card>
