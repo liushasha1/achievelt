@@ -32,6 +32,7 @@
        </el-table-column>
         <el-table-column label="管理操作" align='center' width="400">
           <template slot-scope="scope">
+            <el-button type="info" style="width: 60px;font-size: 12px;padding: 0px;height: 40px;" @click="projectDetail(scope.row.id)" plain>详情</el-button>
             <el-button type="primary" style="width: 60px;font-size: 12px;padding: 0px;height: 40px;" @click="cur=scope;managePerson();" plain>员工信息</el-button>
             <el-button type="success" style="width: 60px;font-size: 12px;padding: 0px;height: 40px;" @click="cur=scope;manageAuth();" plain>人员权限</el-button>
             <el-button type="danger" style="width: 60px;font-size: 12px;padding: 0px;height: 40px;"  @click="cur=scope;manageFun();" plain>功能列表</el-button>
@@ -142,6 +143,15 @@
               _this.hasNextPage = response.data.data.hasNextPage
             }
           })
+      },
+      //查看项目详情
+      projectDetail(id){
+        this.$router.push({
+          path: '/project_detail',
+          query:{
+            projectId : id
+          }
+        })
       },
       //获取第n页的列表数据
       changePage(val) {
